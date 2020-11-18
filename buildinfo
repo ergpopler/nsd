@@ -1,0 +1,3 @@
+cargo bootimage to build.
+
+qemu-system-x86_64 -drive format=raw,file=target/x86_64-nsd/debug/bootimage-nsd.bin
