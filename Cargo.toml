@@ -1,15 +1,17 @@
 [package]
 name = "nsd"
 version = "0.1.0"
-authors = ["erg <omn1present@tutanota.com>"]
+authors = ["Noah Cashin <omn1present@tutanota.com>"]
 edition = "2018"
+license = "BSD-4-Clause"
+repository = "https://github.com/ergpopler/nsd"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 #[profile.dev]
 #panic  = "abort"
 
-#profile.release]
+[profile.release]
 lto = true
 #panic = "abort"
 
