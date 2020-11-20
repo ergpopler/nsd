@@ -4,10 +4,10 @@
 #![test_runner(nsd::test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
-use core::panic::PanicInfo;
 use nsd::println;
+use core::panic::PanicInfo;
 
-#[no_mangle] // don't mangle the name of this function
+#[no_mangle]
 pub extern "C" fn _start() -> ! {
     test_main();
 
@@ -21,5 +21,5 @@ fn panic(info: &PanicInfo) -> ! {
 
 #[test_case]
 fn test_println() {
-    println!("Hello");
+    println!("test_println output");
 }
