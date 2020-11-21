@@ -7,11 +7,12 @@ license = "BSD-4-Clause"
 repository = "https://github.com/ergpopler/nsd"
 
 
-#[profile.dev]
-#panic  = "abort"
+[profile.dev]
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
 
 [profile.release]
 lto = true
+
 [[test]]
 name = "should_panic"
 harness = false
